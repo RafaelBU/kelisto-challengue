@@ -2,10 +2,15 @@ import styled from "styled-components";
 import { ReactComponent as BellIcon } from "../../../../../assets/icons/icon-bell.svg";
 import { white, darkGrey } from "../../../../styleTokens/colors";
 import { bigSize, defaultSize } from "../../../../styleTokens/fontSizes";
+import { loadAnimation } from "../../styles";
 
 export const Container = styled.header`
   width: 100vw;
   height: 184px;
+`;
+
+export const Content = styled.div`
+  animation: ${loadAnimation} 1.5s ease-in;
 `;
 
 export const HeaderRow = styled.div`

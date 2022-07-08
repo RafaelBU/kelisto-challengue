@@ -1,11 +1,18 @@
+import useFindUserBalance from "../../hooks/useFindUserBalance";
 import CryptoList from "./components/CryptoList";
 import WalletBalance from "./components/WalletBalance";
 import * as S from "./styles";
 
 export default function WalletHome() {
+  const { userBalance, isLoading: isLoadingBalance } = useFindUserBalance();
+
   return (
     <S.HomeContainer>
-      <WalletBalance name="Rafa" balance={500} />
+      <WalletBalance
+        name={userBalance?.owner as string}
+        balance={userBalance?.balance as number}
+        isLoading={isLoadingBalance}
+      />
       <CryptoList />
     </S.HomeContainer>
   );

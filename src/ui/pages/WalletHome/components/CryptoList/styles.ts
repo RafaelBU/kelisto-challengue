@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import { white } from "../../../../styleTokens/colors";
+import { mainRadius } from "../../../../styleTokens/bordersRadius";
 
 export const Container = styled.div`
   background-color: ${white};
-  border-radius: 30px 30px 0 0;
+  border-top-left-radius: ${mainRadius};
+  border-top-right-radius: ${mainRadius};
   height: calc(100vh - 184px);
 `;
