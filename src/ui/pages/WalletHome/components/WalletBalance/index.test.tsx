@@ -5,7 +5,7 @@ describe("WalletBalance component", () => {
   it("should render all the correct elements", () => {
     render(<WalletBalance name="Rafa" balance={500} isLoading={false} />);
 
-    const ownerName = screen.getByRole("heading", { name: /hi rafa/i });
+    const ownerName = screen.getByRole("headin", { name: /hi rafa/i });
     const bellIcon = screen.getByLabelText(/bell-icon/i);
     const balanceTitle = screen.getByLabelText(/balance-title/i);
     const balanceAmount = screen.getByLabelText(/balance-amount/i);
