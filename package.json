@@ -22,7 +22,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "cross-env CI=true react-scripts test --env=jsdom",
+    "test": "cross-env CI=true react-scripts test a --env=jsdom --watchAll=false",
     "test:dev": "react-scripts test --watch",
     "eject": "react-scripts eject",
     "tsc": "tsc --noEmit",
