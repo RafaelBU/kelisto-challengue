@@ -1,7 +1,11 @@
-import { render, screen } from "@testing-library/react";
+import { cleanup, render, screen } from "@testing-library/react";
 import WalletBalance from ".";
 
 describe("WalletBalance component", () => {
+  afterEach(() => {
+    cleanup();
+  });
+
   it("should render all the correct elements", () => {
     render(<WalletBalance name="Rafa" balance={500} isLoading={false} />);
 

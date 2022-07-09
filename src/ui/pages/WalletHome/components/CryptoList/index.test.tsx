@@ -1,9 +1,13 @@
-import { render, screen } from "@testing-library/react";
+import { cleanup, render, screen } from "@testing-library/react";
 import CryptoList from ".";
 import { mockCryptoList } from "../../../../../infrastructure/services/getCryptoList/__fixtures__";
 import { toFormatString } from "../../../../utils";
 
 describe("CryptoList component", () => {
+  afterEach(() => {
+    cleanup();
+  });
+
   it("should render all the correct elements", () => {
     render(<CryptoList list={mockCryptoList} isLoading={false} />);
 

@@ -1,8 +1,12 @@
-import { render, screen } from "@testing-library/react";
+import { cleanup, render, screen } from "@testing-library/react";
 import Button from ".";
 import { ReactComponent as BellIcon } from "../../../assets/icons/icon-bell.svg";
 
 describe("Button component", () => {
+  afterEach(() => {
+    cleanup();
+  });
+
   it("should render the title and not the icon", () => {
     render(<Button title="Example text" variant="primary" size="big" />);
 
