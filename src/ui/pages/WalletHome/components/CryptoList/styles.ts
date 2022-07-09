@@ -24,7 +24,7 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  margin: 0 16px;
+  margin: 0 16px 87px 16px;
   animation: ${loadAnimation} 1.5s ease-in;
 `;
 
