@@ -1,16 +1,18 @@
-export const mockCrytoList = [
+import { Crypto } from "../../../../domain/entities/Crypto";
+
+export const mockCryptoList: Crypto[] = [
   {
     id: "123",
-    name: "Bitcoin",
-    sku: "BTC",
-    stock: 100,
-    variant: 1.5,
+    cryptoName: "Bitcoin",
+    nick: "BTC",
+    currencyValue: 100,
+    difference: -1.5,
   },
   {
     id: "456",
-    name: "Ethereum",
-    sku: "ETH",
-    stock: 200,
-    variant: -8.3,
+    cryptoName: "Ethereum",
+    nick: "ETH",
+    currencyValue: 200,
+    difference: -8.3,
   },
 ];

@@ -22,7 +22,6 @@ export const HeaderRow = styled.div`
 
 export const OwnerName = styled.h6`
   color: ${white};
-  font-family: Roboto;
   font-weight: 500;
   font-size: ${defaultSize};
   margin: 0;
@@ -44,17 +43,16 @@ export const BalanceContainer = styled.div`
 `;
 
 export const BalanceTitle = styled.p`
-  font-family: Roboto;
   font-size: ${defaultSize};
   font-weight: 400;
   line-height: 19px;
   color: ${darkGrey};
   margin-top: 0;
   margin-bottom: 8px;
+  letter-spacing: 0.1em;
 `;
 
 export const BalanceAmount = styled.p`
-  font-family: Roboto;
   font-size: ${bigSize};
   font-weight: 500;
   line-height: 42px;

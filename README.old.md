@@ -1,1 +1,0 @@
-# kelisto-challengue

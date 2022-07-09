@@ -1,14 +1,14 @@
 import { renderHook } from "@testing-library/react-hooks";
 import useFindCryptoList from ".";
 import * as getCryptoList from "../../../infrastructure/services/getCryptoList";
-import { mockCrytoList } from "../../../infrastructure/services/getCryptoList/__fixtures__";
+import { mockCryptoList } from "../../../infrastructure/services/getCryptoList/__fixtures__";
 
 jest.mock("../../../infrastructure/services/getCryptoList", () => jest.fn());
 
 describe("useFindCryptoList", () => {
   it("should load the list of cryptos", async () => {
     const mockFunction = getCryptoList.default as jest.Mock;
-    mockFunction.mockReturnValueOnce(mockCrytoList);
+    mockFunction.mockReturnValueOnce(mockCryptoList);
 
     const { result, waitFor } = renderHook(() => useFindCryptoList());
 
@@ -17,7 +17,7 @@ describe("useFindCryptoList", () => {
 
     await waitFor(() => expect(result.current.isLoading).toEqual(false));
 
-    expect(result.current.cryptoList).toEqual(mockCrytoList);
+    expect(result.current.cryptoList).toEqual(mockCryptoList);
     expect(result.current.errorMessage).toBe("");
     expect(mockFunction.mock.calls).toEqual([[]]);
   });
