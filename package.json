@@ -26,12 +26,8 @@
     "test:dev": "react-scripts test --watch",
     "eject": "react-scripts eject",
     "tsc": "tsc --noEmit",
-    "lint": "eslint src --fix"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm run lint && npm tsc && npm test"
-    }
+    "lint": "eslint src --fix",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -62,7 +58,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "husky": "^8.0.1",
+    "husky": "^8.0.0",
     "prettier": "^2.7.1"
   }
 }
