@@ -1,5 +1,5 @@
-import { Wallet } from "../../domain/entities/Wallet";
-import { CryptoApi } from "../../domain/types/cryptoApi";
+import { Wallet } from "../../../domain/entities/Wallet";
+import { CryptoApi } from "../../../domain/types/cryptoApi";
 
 const adaptUserBalance = (data: CryptoApi[]): Wallet => {
   const balanceAmounts = data.reduce((acc, current) => {

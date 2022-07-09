@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { Wallet } from "../../domain/entities/Wallet";
-import getUserBalance from "../../infrastructure/services/getUserBalance";
+import { Wallet } from "../../../domain/entities/Wallet";
+import getUserBalance from "../../../infrastructure/services/getUserBalance";
 
 export default function useFindUserBalance() {
   const [isLoading, setIsLoading] = useState<boolean>(true);

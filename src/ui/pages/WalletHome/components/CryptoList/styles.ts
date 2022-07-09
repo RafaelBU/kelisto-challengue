@@ -7,4 +7,5 @@ export const Container = styled.div`
   border-top-left-radius: ${mainRadius};
   border-top-right-radius: ${mainRadius};
   height: calc(100vh - 184px);
+  padding: 28px 16px;
 `;

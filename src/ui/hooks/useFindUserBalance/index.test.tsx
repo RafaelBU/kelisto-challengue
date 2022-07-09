@@ -1,9 +1,9 @@
 import { renderHook } from "@testing-library/react-hooks";
-import * as getUserBalance from "../../infrastructure/services/getUserBalance";
-import { mockWalletBalance } from "../../infrastructure/services/__fixtures__";
-import useFindUserBalance from "./useFindUserBalance";
+import useFindUserBalance from ".";
+import * as getUserBalance from "../../../infrastructure/services/getUserBalance";
+import { mockWalletBalance } from "../../../infrastructure/services/getUserBalance/__fixtures__";
 
-jest.mock("../../infrastructure/services/getUserBalance", () => jest.fn());
+jest.mock("../../../infrastructure/services/getUserBalance", () => jest.fn());
 
 describe("useFindUserBalance", () => {
   it("should load the balance of the user", async () => {
