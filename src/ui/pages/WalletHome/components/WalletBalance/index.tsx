@@ -17,7 +17,7 @@ export default function WalletBalance({
       {isLoading ? (
         <Loader />
       ) : (
-        <S.Content>
+        <S.Content aria-label="balance-content">
           <S.HeaderRow>
             <S.OwnerName>{`Hi ${name}`}</S.OwnerName>
             <S.StyledBellIcon color={white} aria-label="bell-icon" />
