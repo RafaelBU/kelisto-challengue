@@ -15,12 +15,13 @@ type DifferenceProps = {
   isPositive: boolean;
 };
 
-export const Container = styled.div`
+export const Container = styled.main`
   background-color: ${white};
   border-top-left-radius: ${mainRadius};
   border-top-right-radius: ${mainRadius};
-  height: calc(100vh - 184px);
-  padding: 28px 16px;
+  height: 58vh;
+  padding: 28px 16px 0 16px;
+  overflow: auto;
 `;
 
 export const Content = styled.div`
@@ -96,4 +97,18 @@ export const DifferencePercentage = styled.p<DifferenceProps>`
   line-height: 19px;
   letter-spacing: 0em;
   color: ${(props) => (props.isPositive ? darkGreen : darkRed)};
+`;
+
+export const ButtonContainer = styled.div`
+  animation: ${loadAnimation} 1.5s ease-in;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (min-width: 480px) {
+    width: 50%;
+  }
+
+  @media (min-width: 1024px) {
+    width: 30%;
+  }
 `;

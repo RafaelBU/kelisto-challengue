@@ -47,7 +47,13 @@ export default function CryptoList({
               </S.CryptoRow>
             ))}
           </S.Content>
-          <Button title="Show all transactions" variant="primary" size="big" />
+          <S.ButtonContainer>
+            <Button
+              title="Show all transactions"
+              variant="primary"
+              size="big"
+            />
+          </S.ButtonContainer>
         </>
       )}
     </S.Container>

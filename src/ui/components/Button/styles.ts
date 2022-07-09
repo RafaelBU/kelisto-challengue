@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { buttonRadius } from "../../styleTokens/bordersRadius";
-import { darkBlue, white } from "../../styleTokens/colors";
+import { darkBlue, darkGrey, white } from "../../styleTokens/colors";
 import { defaultSize } from "../../styleTokens/fontSizes";
 
 const propsFromVariant = ({
@@ -21,7 +21,7 @@ const propsFromVariant = ({
     },
     border: {
       primary: "none",
-      secondary: `1px solid ${darkBlue}`,
+      secondary: `1px solid ${darkGrey}`,
     },
   };
 
