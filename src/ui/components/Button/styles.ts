@@ -69,4 +69,5 @@ export const StyledButton = styled.button<Props>`
   font-weight: 500;
   line-height: 19px;
   letter-spacing: 0em;
+  cursor: pointer;
 `;
