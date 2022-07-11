@@ -1,7 +1,7 @@
 import { Wallet } from "../../../../domain/entities/Wallet";
 
 export const mockWalletBalance: Wallet = {
-  id: "123",
-  owner: "Anakin",
-  balance: 1500,
+  id: "456",
+  owner: "Rafa",
+  balance: 300,
 };
