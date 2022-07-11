@@ -1,3 +1,4 @@
+import ErrorBlock from "../../../../components/ErrorBlock";
 import Loader from "../../../../components/Loader";
 import { white } from "../../../../styleTokens/colors";
 import { toFormatString } from "../../../../utils";
@@ -7,16 +8,18 @@ export default function WalletBalance({
   name,
   balance,
   isLoading,
+  error,
 }: {
   name: string;
   balance: number;
   isLoading: boolean;
+  error: string;
 }) {
   return (
     <S.Container>
       {isLoading ? (
         <Loader />
-      ) : (
+      ) : error === "" ? (
         <S.Content aria-label="balance-content">
           <S.HeaderRow>
             <S.OwnerName>{`Hi ${name}`}</S.OwnerName>
@@ -31,6 +34,8 @@ export default function WalletBalance({
             </S.BalanceAmount>
           </S.BalanceContainer>
         </S.Content>
+      ) : (
+        <ErrorBlock message={error} />
       )}
     </S.Container>
   );

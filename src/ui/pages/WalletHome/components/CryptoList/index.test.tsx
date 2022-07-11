@@ -9,7 +9,7 @@ describe("CryptoList component", () => {
   });
 
   it("should render all the correct elements", () => {
-    render(<CryptoList list={mockCryptoList} isLoading={false} />);
+    render(<CryptoList list={mockCryptoList} isLoading={false} error="" />);
 
     const title = screen.getByLabelText(/list-title/i);
     const numRows = screen.getAllByLabelText(/list-row/i);
@@ -50,9 +50,19 @@ describe("CryptoList component", () => {
   });
 
   it("should render only the loader when data call is loading", () => {
-    render(<CryptoList list={mockCryptoList} isLoading={true} />);
+    render(<CryptoList list={mockCryptoList} isLoading={true} error="" />);
 
     expect(screen.getByLabelText(/loader/i)).toBeInTheDocument();
+
+    expect(screen.queryByLabelText(/list-content/i)).not.toBeInTheDocument();
+  });
+
+  it("should render the error instead of the list content", () => {
+    render(
+      <CryptoList list={mockCryptoList} isLoading={false} error="List error" />
+    );
+
+    expect(screen.getByText(/list error/i)).toBeInTheDocument();
 
     expect(screen.queryByLabelText(/list-content/i)).not.toBeInTheDocument();
   });

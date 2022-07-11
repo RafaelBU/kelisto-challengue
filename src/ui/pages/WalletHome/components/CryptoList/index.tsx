@@ -1,5 +1,6 @@
 import { Crypto } from "../../../../../domain/entities/Crypto";
 import Button from "../../../../components/Button";
+import ErrorBlock from "../../../../components/ErrorBlock";
 import Loader from "../../../../components/Loader";
 import { toFormatString } from "../../../../utils";
 import * as S from "./styles";
@@ -10,15 +11,17 @@ const getSymbol = (amount: number) => (isPositive(amount) ? "+" : "");
 export default function CryptoList({
   list,
   isLoading,
+  error,
 }: {
   list: Crypto[];
   isLoading: boolean;
+  error: string;
 }) {
   return (
     <S.Container>
       {isLoading ? (
         <Loader />
-      ) : (
+      ) : error === "" ? (
         <>
           <S.Content aria-label="list-content">
             <S.ListTitle aria-label="list-title">Recent</S.ListTitle>
@@ -55,6 +58,8 @@ export default function CryptoList({
             />
           </S.ButtonContainer>
         </>
+      ) : (
+        <ErrorBlock message={error} />
       )}
     </S.Container>
   );
